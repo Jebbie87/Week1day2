@@ -1,5 +1,5 @@
 var date = process.argv[2];
-//HI
+
 if (!date) {
   console.log("Please provide a date in the format YYYY/MM/DD");
 } else {
@@ -30,7 +30,7 @@ function calculateDayInYear(date) {
   }
 
   function calculateDayNumber(month, day) {
-    var dayOfYear = day;
+    var dayOfYear = ;
 
     for (var i = 1; i < month; i++) {
       dayOfYear += DAYS_IN_MONTH[i - 1];
