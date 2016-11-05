@@ -4,21 +4,11 @@ function isPalindrome(str) {
   var last = noSpaces.length - 1;
   var checked;
 
-    // for (var i = 0; i < mid; i++) {
-    //   console.log(noSpaces[i], noSpaces[last - i], noSpaces[i] != noSpaces[last - i])
-    //   if (noSpaces[i] != noSpaces[last - i]) {
-    //     checked = check && false;
-    //   } else {
-    //     checked = true;
-    //   }
-    // }
-
     if (noSpaces.length <= 1){
       return true
     }
 
     for (var i = 0; i < mid; i++) {
-      //console.log(noSpaces[i], noSpaces[last - i], noSpaces[i] != noSpaces[last - i])
       if (noSpaces[i] != noSpaces[last - i]) {
         return false
       }
