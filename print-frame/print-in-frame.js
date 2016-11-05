@@ -1,8 +1,6 @@
 function printInFrame(list) {
   var list = list.split(' ');
-  // longest = 6
   var longest = longestStr(list).length;
-  //console.log(longest);
   var border = repeat('*', longest + 3);
 
   console.log(border);
