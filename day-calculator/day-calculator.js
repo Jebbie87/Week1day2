@@ -21,34 +21,32 @@ function calculateDayInYear(date) {
     console.log("Invalid date");
   }
 
-  function validMonth(month) {
-    return month && month >= 1 && month <= 12;
-    }
+function validMonth(month) {
+  return month && month >= 1 && month <= 12;
+}
 
-  function validDay(month, day) {
-    return day && day >= 1 && day <= DAYS_IN_MONTH[month - 1];
+function validDay(month, day) {
+  return day && day >= 1 && day <= DAYS_IN_MONTH[month - 1];
+}
+
+function calculateDayNumber(month, day) {
+  var dayOfYear = ;
+
+  for (var i = 1; i < month; i++) {
+    dayOfYear += DAYS_IN_MONTH[i - 1];
   }
+  return dayOfYear;
+}
 
-  function calculateDayNumber(month, day) {
-    var dayOfYear = ;
-
-    for (var i = 1; i < month; i++) {
-      dayOfYear += DAYS_IN_MONTH[i - 1];
-    }
-
-    //dayOfYear += day;
-    return dayOfYear;
+function daysInFeb(year) {
+  if (isLeapYear(year) === true) {
+    return 29;
+  } else {
+    return 28;
   }
+}
 
-  function daysInFeb(year) {
-    if (isLeapYear(year) === true) {
-      return 29;
-    } else {
-      return 28;
-    }
-  }
-
-  function isLeapYear(year) {
+function isLeapYear(year) {
     return isMultiple(year, 400) || !isMultiple(year, 100) && isMultiple(year, 4);
   }
 }
